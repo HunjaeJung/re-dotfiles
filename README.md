@@ -6,6 +6,6 @@
 
 
 # 참고
-- ![Thoughtbot Dotfiles](https://github.com/thoughtbot/dotfiles)
+- [Thoughtbot Dotfiles](https://github.com/thoughtbot/dotfiles)
 
 
