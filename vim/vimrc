@@ -1,0 +1,10 @@
+" @hunjae's vimrc
+
+" 정교한 코딩을 위해
+set nu
+set ruler
+
+" space보단 tab을 사용한다.
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
