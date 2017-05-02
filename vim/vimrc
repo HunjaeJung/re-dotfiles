@@ -8,6 +8,13 @@ nnoremap <leader>b abc
 
 nnoremap <leader>src :source ~/.vimrc<CR>
 
+" leader key mapping
+nnoremap <leader>a abc
+let mapleader=","
+nnoremap <leader>b abc
+
+nnoremap <leader>src :source ~/.vimrc<CR>
+
 " 정교한 코딩을 위해
 set nu
 set ruler
@@ -25,6 +32,9 @@ noremap _ ddkP
 "inoremap <c-u> <esc>viwUea
 "inoremap <c-d> <esc>ddi
 "nnoremap <c-u> viwUe
+inoremap <c-u> <esc>viwUea
+inoremap <c-d> <esc>ddi
+nnoremap <c-u> viwUe
 
 nnoremap dd 0<esc>jddk
 nnoremap H 0
@@ -34,7 +44,6 @@ nnoremap dH d0
 vnoremap " <esc>`<i"<esc>`>a"<esc>
 inoremap jk <esc>
 inoremap <esc> <nop>
-
 
 " 약어
 iabbrev @@ hunjae@ab180.co
@@ -66,4 +75,3 @@ onoremap p i(
 onoremap b /return<cr>
 onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap il( :<c-u>normal! F)vi(<cr>
-
