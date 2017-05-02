@@ -1,10 +1,69 @@
 " @hunjae's vimrc
+execute pathogen#infect()
+
+" leader key mapping
+nnoremap <leader>a abc
+let mapleader=","
+nnoremap <leader>b abc
+
+nnoremap <leader>src :source ~/.vimrc<CR>
 
 " 정교한 코딩을 위해
 set nu
 set ruler
+set shiftround
 
 " space보단 tab을 사용한다.
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
+
+" key mappings
+noremap <space> viw
+noremap - ddp
+noremap _ ddkP
+"inoremap <c-u> <esc>viwUea
+"inoremap <c-d> <esc>ddi
+"nnoremap <c-u> viwUe
+
+nnoremap dd 0<esc>jddk
+nnoremap H 0
+nnoremap L $
+nnoremap dL d$
+nnoremap dH d0
+vnoremap " <esc>`<i"<esc>`>a"<esc>
+inoremap jk <esc>
+inoremap <esc> <nop>
+
+
+" 약어
+iabbrev @@ hunjae@ab180.co
+iabbrev ccopy Copyright 2016 Hunjae Jung, all rights reserved.
+iabbrev ""anrdoid" android
+
+" 오타 교정
+iabbrev waht what
+iabbrev "adn" and
+iabbrev tehn then
+
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+
+set wildmenu
+set wildmode=list:longest,full
+set wildignore=*.swp,*.swo,*.class
+
+augroup filetype_html
+	autocmd!
+	let maplocalleader='\'
+	autocmd FileType python nnoremap <buffer> <localleader>c I#<esc>
+	autocmd FileType javascript nnoremap <buffer> <localleader>c I//<esc>
+	autocmd FileType python :iabbrev <buffer> iff if:<left>
+	autocmd FileType javascript :iabbrev <buffer> iff if ()<left>
+	autocmd FileType html nnoremap <buffer> <localleader>f Vatzf
+augroup END
+
+onoremap p i(
+onoremap b /return<cr>
+onoremap in( :<c-u>normal! f(vi(<cr>
+onoremap il( :<c-u>normal! F)vi(<cr>
+
